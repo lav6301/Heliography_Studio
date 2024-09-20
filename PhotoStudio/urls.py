@@ -18,11 +18,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django_distill import distill_path
+from main import views
+# Function for distill to return data
+def get_index():
+    return None  # Returns None because no specific data is required
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+
+     # Add the static version of home
+    distill_path('', views.home, name='home', distill_func=get_index),
 ]
 
 

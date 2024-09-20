@@ -1,0 +1,154 @@
+.contact-container {
+    padding: 20px;
+    background-color: whitesmoke; /* Light background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.connect-title {
+    text-align: center;
+    font-size: 32px;
+    color: #FF7043; /* Bright title color */
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 600px;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: khaki;
+    box-shadow: 0 4px 8px rgba(210, 230, 243, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #041840;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: #041840;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 2px solid #C1C7D9;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+    height: 60px;
+}
+
+.contact-form button {
+    background-color: #FF7043;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #FF8A65;
+}
+
+.contact-map {
+    flex: 1;
+    max-width: 700px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.social-media {
+    text-align: center;
+    color: cadetblue;
+}
+
+.map-subcontent {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.map-subpara {
+    font-size: 14px;
+    color: #004AAD;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #004AAD;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF7043;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-map {
+        width: 100%;
+    }
+}
+
+@media(max-width: 576px) {
+    .contact-form input, 
+    .contact-form button, 
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .contact-form button {
+        height: 40px;
+    }
+}
