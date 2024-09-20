@@ -1,0 +1,99 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    body {
+        background-image: url("{% static 'image/signupimg.jpg' %}");
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+       
+    }
+
+    body{
+        padding: 10px;
+    }
+    button{
+        border-radius: 20px;
+        margin: 10px;
+        border-style:none;
+        font-size:18px;
+        font-weight:bold;
+        background-color:orange;
+        color:white;
+    }
+
+    a{
+        margin-top:20px;
+        text-align: center;
+        color: darkgray;
+        font-size:20px;
+        font-weight bold;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: rgb(178, 180, 70);
+      }
+</style>
+
+{% block content %}
+
+<div class="wrapper">
+<form method="POST">
+<h1>Signup</h1>
+<div class="input-field">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Signup</button>
+    <a href="{% url 'login' %}">Already have account?</a>
+</form>
+</div>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const passwordField = document.getElementById('id_password1');
+        const confirmPasswordField = document.getElementById('id_password2');
+        const passwordHelpText = document.getElementById('id_password1_helptext');
+        const confirmPasswordHelpText = document.getElementById('id_password2_helptext');
+        
+        // Show help text when password field is focused
+        passwordField.addEventListener('focus', () => {
+            passwordHelpText.style.display = 'block';
+        });
+    
+        // Hide password help text when confirm password field is focused or typed into
+        confirmPasswordField.addEventListener('focus', () => {
+            passwordHelpText.style.display = 'none';
+            confirmPasswordHelpText.style.display = 'block';
+        });
+    
+        confirmPasswordField.addEventListener('input', () => {
+            confirmPasswordHelpText.style.display = 'none';
+        });
+    
+        // Hide help text when clicking away from password fields
+        document.addEventListener('click', (event) => {
+            if (!passwordField.contains(event.target) && !confirmPasswordField.contains(event.target)) {
+                passwordHelpText.style.display = 'none';
+                confirmPasswordHelpText.style.display = 'none';
+            }
+        });
+    });
+    
+</script>
+
+
+{% endblock content %} 
+

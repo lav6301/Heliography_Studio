@@ -1,0 +1,209 @@
+{% include "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% block content %}
+
+
+{% comment %} slider for preweding and post wedding {% endcomment %}
+<div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="{% url 'service_detail' 8 %}">
+            <img src="{% static 'image/img slider1.jpg' %}" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="{% url 'service_detail' 6 %}">
+            <img src="{% static 'image/finbabe.avif' %}" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="{% url 'service_detail' 7 %}">
+            <img src="{% static 'image/Hiloimg1.gif' %}" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+{% comment %}  {% endcomment %}
+{% comment %} card ccode should present  {% endcomment %}
+<!-- Pre-Wedding Photos -->
+<h2>Our Gallery</h2>
+<div class="galleryPhoto">
+  <h3 class="preweddingphotos" style="color:white;">Pre-Wedding Photos</h3>
+  <div class="box">
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 8 %}">
+              <img src="{% static 'image/preheil.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Celebrated in Hindu Wedding<br><span>Pre-Wedding</span></h2>
+          </div>
+      </div>
+      
+    <div class="card">
+      <div class="imgBx">
+        <a href="{% url 'service_detail' 8 %}">
+          <img src="{% static 'image/preheil1.jpg' %}" alt="images">
+        </a>
+      </div>
+      <div class="details">
+          <h2>Beautiful Couple<br><span>Pre-Wedding</span></h2>
+      </div>
+  </div>
+  
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 8 %}">
+              <img src="{% static 'image/wedding helio.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Memorable Event<br><span>Pre-Wedding</span></h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+{% comment %} Post-Wedding {% endcomment %}
+
+<h3 class="preweddingphotos" style="color:white;">Post-Wedding Photos</h3>
+  <div class="box">
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 4 %}">
+              <img src="{% static 'image/prewedding11.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Celebrated in Loveable Moments💖<br><span>Post-Wedding</span></h2>
+          </div>
+      </div>
+      
+    <div class="card">
+      <div class="imgBx">
+        <a href="{% url 'service_detail' 4 %}">
+          <img src="{% static 'image/helio img1.jpg' %}" alt="images">
+        </a>
+      </div>
+      <div class="details">
+          <h2>Beautiful Couple 😍<br><span>Post-Wedding</span></h2>
+      </div>
+  </div>
+  
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 4 %}">
+              <img src="{% static 'image/prewedding5.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Memorable Event😘<br><span>Post-Wedding</span></h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- Baby Shoot Photos -->
+<div class="galleryPhoto">
+  <h3 class="babyshootphotos" style="color:white;">Baby Shoot Photos</h3>
+  <div class="box">
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 6 %}">
+            <img src="{% static 'image/baby shoot10.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Baby's First Steps<br><span>Baby Shoot</span></h2>
+          </div>
+      </div>
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 6 %}">
+            <img src="{% static 'image/baby shoot8.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Adorable Moments<br><span>Baby Shoot</span></h2>
+          </div>
+      </div>
+
+   
+
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 6 %}">
+            <img src="{% static 'image/baby shoot9.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Pure Happiness<br><span>Baby Shoot</span></h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Birthday Party Photos -->
+<div class="container-fluid">
+<div class="galleryPhoto">
+  <h3 class="birthdaypartyphotos" style="color:white">Birthday Party Photos</h3>
+  <div class="box">
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 7 %}">
+            <img src="{% static 'image/birthday12.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Birthday Bash<br><span>Birthday Party</span></h2>
+          </div>
+      </div>
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 7 %}">
+            <img src="{% static 'image/birthday13.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Fun and Games<br><span>Birthday Party</span></h2>
+          </div>
+      </div>
+
+
+      <div class="card">
+          <div class="imgBx">
+            <a href="{% url 'service_detail' 7 %}">
+            <img src="{% static 'image/birthday2.jpg' %}" alt="images">
+            </a>
+          </div>
+          <div class="details">
+              <h2>Memorable Moments<br><span>Birthday Party</span></h2>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+{% endblock content %}

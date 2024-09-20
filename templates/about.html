@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}"> 
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'image/photographerfinalphoto.jpg' %}" 
+            alt="About Us Image" id="aboutImage"  class="img-fluid rounded about-img mb-4" style="width:90%;height:400px;">
+        </div>
+        <div class="col-md-6 about-text">
+            <h2 class="col-pt-5">About Us</h2>
+            <p>Welcome to Heliography Studio, where we capture life's most cherished moments through the lens of creativity and passion. With over 10 years of experience in professional photography, we have built a reputation for delivering timeless and stunning memories for our clients. Based on a commitment to excellence, our team of dedicated photographers and videographers ensures that every event we cover is unique and tailored to your vision.</p>
+
+            <p>We specialize in a wide range of photography services, including Pre-Wedding, Post-Wedding, Baby Shoots, and Birthday Parties. Whether it's the joy of a wedding day, the innocence of a baby's first moments, or the fun of a birthday celebration, we’re here to document every detail, making sure you can relive those special occasions forever.</p>
+
+            <p>At Heliography Studio, we understand the importance of every event. That’s why we offer a seamless experience from start to finish, allowing you to focus on enjoying your special day. And to make it even more convenient, you can now book your event with us directly through our website, ensuring your day is captured with the professionalism and care it deserves.</p>
+
+            <p class="quoteParagraphy" style=" color: rgb(99, 99, 29); font-weight:bold;">
+                "Let us turn your moments into memories that will last a lifetime."</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

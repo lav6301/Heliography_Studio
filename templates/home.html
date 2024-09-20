@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .home-content {
+        height: 100vh;
+        background-image: url("{% static 'image/cameraphoto1.jpg' %}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+    }
+    .home-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: hsl(293, 67%, 23%);
+    }
+    .home-paragraph {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+  
+</style>
+<div class="home-content">
+    {% comment %} <h2 class="home-heading">Capture your Lovely Moments With Us</h2>
+    <p class="home-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel autem ex quos doloribus, corrupti maxime dolores quo impedit nobis aspernatur modi dignissimos nesciunt sint voluptate atque. Est, quidem soluta.</p> {% endcomment %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+.container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 100%;  /* Ensure container doesn't exceed viewport */
+    overflow-x: hidden;
+}
+
+h2 {
+    color: #0044ad;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .about-img {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .about-text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+#aboutImage{
+    width: 100%;
+    height: 450px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: 450px;
+}
+
+.quoteParagraphy{
+    color: rgb(99, 99, 29);
+}
